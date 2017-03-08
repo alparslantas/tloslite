@@ -1,0 +1,29 @@
+.special-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+.navbar-special {
+    background-image: linear-gradient(to bottom, #337ab7 0, #6c8194 100%)
+}
+
+.nav>li {
+    margin-left: 30px;
+}
+
+.dropdown-menu>li>a {
+    padding: 5px 20px;
+}
+
+nav .navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: -10px;
+}
