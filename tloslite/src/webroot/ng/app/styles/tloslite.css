@@ -27,3 +27,19 @@ nav .navbar-brand img {
     margin-left: 10px;
     margin-top: -10px;
 }
+
+#tlos-job-table>thead {
+  background-color: aliceblue;
+}
+
+.tlos-play-icon {
+  color: #21d231;
+}
+
+.tlos-pause-icon{
+  color : #acb120;
+}
+
+.tlos-stop-icon{
+  color : #ab2200;
+}

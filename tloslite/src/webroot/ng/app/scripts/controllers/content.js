@@ -1,12 +1,23 @@
 'use strict';
 
 
-function ContentController() {
+ContentController.$inject = ['$translate'];
+
+function ContentController($translate) {
 
   // console.log("tloslite content");
+  var self = this;
+
+  self.language = 'en';
+  self.languages = ['en', 'tr'];
+
+  self.updateLanguage = function() {
+    $translate.use(self.language);
+  };
+
 
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#tlos-job-table').DataTable();
 } );
 }
 

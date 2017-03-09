@@ -1,10 +1,9 @@
-
 (function() {
 
     'use strict';
 
 
-    var app = angular.module('tloslite', []);
+    var app = angular.module('tloslite', ['pascalprecht.translate']);
 
 
     app.controller("StoreController", function() {
@@ -23,24 +22,39 @@
         };
     });
 
-    var gems = [{
-        name: "kağıt",
-        price: 2.5,
-        description: "kağıt",
-        date: "1365241613452",
-        canPurchase: true,
-    }, {
-        name: "defter",
-        price: 7.5,
-        description: "defter",
-        date: "1324161345723",
-        canPurchase: false
-    }, {
-        name: "kalem",
-        price: 12.5,
-        description: "kalem",
-        date: "1352411343452",
-        canPurchase: true
-    }]
+    app.config(function($translateProvider) {
+        $translateProvider
+            .translations('en', {
+                TITLE: 'Welcome!',
+                MESSAGE: 'This app supports your lanaguage!'
+            })
+            .translations('tr', {
+                TITLE: 'Hoşgeldiniz!',
+                MESSAGE: 'Türkçe desteği mevcut!'
+            });;
+
+        $translateProvider.preferredLanguage('en');
+        // console.console.log($translateProvider);
+    });
+    //
+    // var gems = [{
+    //     name: "kağıt",
+    //     price: 2.5,
+    //     description: "kağıt",
+    //     date: "1365241613452",
+    //     canPurchase: true,
+    // }, {
+    //     name: "defter",
+    //     price: 7.5,
+    //     description: "defter",
+    //     date: "1324161345723",
+    //     canPurchase: false
+    // }, {
+    //     name: "kalem",
+    //     price: 12.5,
+    //     description: "kalem",
+    //     date: "1352411343452",
+    //     canPurchase: true
+    // }]
 
 })();
