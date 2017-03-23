@@ -1,24 +1,17 @@
 'use strict';
 
 
-ContentController.$inject = ['$translate'];
+ContentController.$inject = ['ModalService'];
 
-function ContentController($translate) {
+function ContentController(modalService) {
 
-  // console.log("tloslite content");
-  var self = this;
+    // console.log("tloslite content");
+    var self = this;
 
-  self.language = 'en';
-  self.languages = ['en', 'tr'];
+    $(document).ready(function() {
+        $('#tlos-job-table').DataTable();
+    });
 
-  self.updateLanguage = function() {
-    $translate.use(self.language);
-  };
-
-
-  $(document).ready(function() {
-    $('#tlos-job-table').DataTable();
-} );
 }
 
 angular.module('tloslite').directive('tlosContent', function() {

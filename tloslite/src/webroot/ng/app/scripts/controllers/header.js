@@ -1,9 +1,33 @@
 'use strict';
 
 
-function HeaderController() {
+HeaderController.$inject = ['$translate', '$translatePartialLoader'];
 
-  // console.log("tloslite top menu");
+function HeaderController($translate, $translatePartialLoader) {
+
+    // console.log("tloslite top menu");
+    var self = this;
+
+    // self.language = 'en';
+
+    self.languages = [{
+        code: "en",
+        value: "English"
+    }, {
+        code: 'tr',
+        value: "Türkçe"
+    }];
+
+    self.changeLanguage = function(lang) {
+        $translate.use(lang);
+    };
+
+
+    // $translatePartialLoader.addPart('common');
+    // $translate.refresh();
+
+
+
 }
 
 angular.module('tloslite').directive('tlosHeader', function() {

@@ -1,22 +1,19 @@
-
-
-
-
-
-
-
-
-<div class="text-center">
-
-    <h3>header</h3>
-    <p>{{ 'TITLE' | translate }} - {{ 'MESSAGE' | translate }}</p>
-
-    <select ng-options="language | translate for language in contentCtrl.languages" ng-model="contentCtrl.language" ng-change="contentCtrl.updateLanguage()"></select>
-
-    <!-- Single button -->
-    <!-- <div class="btn-group">
-        <label ng-repeat='language in contentCtrl.languages' class="btn btn-danger" ng-model="contentCtrl.language" >{{language}}</label>
-    </div> -->
-
-
+<div class="row text-center mt20">
+    <div class="col-sm-4">
+        <h3>header</h3>
+    </div>
+    <div class="col-sm-4">
+        <p>{{ 'TITLE' | translate }} - {{ 'MESSAGE' | translate }}</p>
+        <p>{{ 'common.test' | translate }}</p>
+    </div>
+    <div class="col-sm-4">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li ng-repeat="language in headerCtrl.languages" ng-click="headerCtrl.changeLanguage(language.code)"><a href="#">{{language.value}}</a></li>
+            </ul>
+        </div>
+    </div>
 </div>

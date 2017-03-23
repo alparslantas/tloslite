@@ -39,10 +39,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration Files <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">System Properties</a></li>
-                        <li><a href="#">Scenerio Files</a></li>
-                        <li><a href="#">Tlos Log</a></li>
-                        <li><a href="#">System Log</a></li>
+                        <li><a href="#" ng-click="topMenuCtrl.openSystemPropertiesModal()">System Properties</a></li>
+                        <li><a href="#" ng-click="topMenuCtrl.openScenerioFilesModal()">Scenerio Files</a></li>
+                        <li><a href="#" ng-click="topMenuCtrl.openTlosLogModal()">Tlos Log</a></li>
+                        <li><a href="#" ng-click="topMenuCtrl.openSystemLogModal()">System Log</a></li>
 
                     </ul>
                 </li>
@@ -119,13 +119,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="http://www.likyateknoloji.com" target="_blank">User Guide</a></li>
+                        <li><a href="#" ng-click="topMenuCtrl.openAboutModal()">About</a></li>
                     </ul>
                 </li>
 
